@@ -29,6 +29,7 @@ It uses the visual style and air-quality colour bands of
 - [Running the tests](#running-the-tests)
 - [Deploying to shinyapps.io](#deploying-to-shinyappsio)
 - [Troubleshooting](#troubleshooting)
+- [Credits](#credits)
 
 ---
 
@@ -283,3 +284,13 @@ update the app.
 | "Could not read sensor CSV" | The CSV needs a `gps_datetime` and/or `wifi_datetime` column (see [Input files](#input-files)). |
 | Upload rejected as too large | The limit is 100 MB per file. Change `shiny.maxRequestSize` at the top of `app.R`. |
 | `there is no package called …` | Install the missing package (see [Quick start](#quick-start)). |
+
+---
+
+## Credits
+
+- **Federico Dallo**: [federico.dallo@cnr.it](mailto:federico.dallo@cnr.it)
+- **Marta Coronado**: [Marta.Coronado@uab.cat](mailto:Marta.Coronado@uab.cat)
+
+See also [CREDITS.md](CREDITS.md).
+Source code: <https://github.com/theRosyProject/particularmatter-gpx>

@@ -95,6 +95,17 @@ mark { color: var(--pm-teal); background: transparent; padding: 0; }
 }
 .btn-pm:hover { color: var(--pm-teal) !important; transform: scale(1.025); }
 
+/* sidebar footer: repo link + credits */
+.pm-credits {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--pm-border);
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: var(--pm-text-dim);
+}
+.pm-credits p { margin: 0.25rem 0 0; }
+
 /* cards and value boxes */
 .card, .bslib-value-box {
   background-color: var(--pm-bg-alt) !important;

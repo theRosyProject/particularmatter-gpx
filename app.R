@@ -23,7 +23,13 @@ ui <- page_sidebar(
     selectInput("pollutant", "Measurement", choices = NULL),
     numericInput("offset", "Sensor clock offset (s)", value = 0, step = 1),
     numericInput("max_gap", "Max track gap (s)", value = 30, min = 1, step = 1),
-    downloadButton("download", "Download CSV", class = "btn-pm")
+    downloadButton("download", "Download CSV", class = "btn-pm"),
+    tags$footer(
+      class = "pm-credits",
+      tags$a(href = "https://github.com/theRosyProject/particularmatter-gpx",
+             target = "_blank", rel = "noopener", "Source code on GitHub"),
+      tags$p("Credits: Federico Dallo (CNR) · Marta Coronado (UAB)")
+    )
   ),
   uiOutput("overlap_flag"),
   # drag the bottom-right corner of the map or chart to resize it
