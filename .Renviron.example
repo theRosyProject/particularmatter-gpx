@@ -1,0 +1,8 @@
+# shinyapps.io credentials for scripts/deploy.R.
+# Copy this file to .Renviron (git-ignored) and fill in the values from
+# shinyapps.io > Account > Tokens > Show. Never commit .Renviron.
+SHINYAPPS_ACCOUNT=
+SHINYAPPS_TOKEN=
+SHINYAPPS_SECRET=
+# optional, default: particularmatter-gpx
+# SHINYAPPS_APP_NAME=particularmatter-gpx

@@ -34,3 +34,6 @@ $RECYCLE.BIN/
 .directory
 .Trash-*
 .nfs*
+
+# shinyapps.io deployment records (local)
+rsconnect/

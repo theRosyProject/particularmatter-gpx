@@ -27,6 +27,7 @@ It uses the visual style and air-quality colour bands of
 - [Demo data](#demo-data)
 - [Project structure](#project-structure)
 - [Running the tests](#running-the-tests)
+- [Deploying to shinyapps.io](#deploying-to-shinyappsio)
 - [Troubleshooting](#troubleshooting)
 
 ---
@@ -251,6 +252,23 @@ Rscript -e 'testthat::test_dir("tests/testthat")'
 A few tests use real recordings (`example/Morning_Hike.gpx`,
 `example/2026-10-12_log.csv`) that are not part of the repository. They are
 skipped automatically when those files are missing.
+
+---
+
+## Deploying to shinyapps.io
+
+1. Copy `.Renviron.example` to `.Renviron` and fill in your account name,
+   token and secret (shinyapps.io → **Account → Tokens → Show**).
+   `.Renviron` is git-ignored: never commit it.
+2. Install `rsconnect` once: `install.packages("rsconnect")`.
+3. Deploy from the project folder:
+
+   ```sh
+   Rscript scripts/deploy.R
+   ```
+
+Only `app.R`, `R/` and `www/` are uploaded. Run the same command again to
+update the app.
 
 ---
 
