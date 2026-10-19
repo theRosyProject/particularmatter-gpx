@@ -1,0 +1,188 @@
+/* ParticularMatter visual identity (particularmatter.org/setup.html) */
+:root {
+  --pm-bg: #212529;
+  --pm-bg-alt: #24292E;
+  --pm-border: rgba(255, 255, 255, 0.06);
+  --pm-teal: #61FFD0;
+  --pm-yellow: #F6C90E;
+  --pm-coral: #FF6B6B;
+  --pm-text: rgba(255, 255, 255, 0.741);
+  --pm-text-dim: rgba(255, 255, 255, 0.45);
+}
+
+body {
+  background-color: var(--pm-bg);
+  color: var(--pm-text);
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, .card-header, .navbar-brand {
+  font-family: 'Antonio', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+mark { color: var(--pm-teal); background: transparent; padding: 0; }
+
+/* header: logo + wordmark, as on the site nav */
+.bslib-page-title, .navbar {
+  background-color: rgba(33, 37, 41, 0.95) !important;
+  border-bottom: 1px solid var(--pm-border);
+}
+.pm-logo { display: flex; align-items: center; gap: 0.75rem; }
+.pm-logo img { height: 2.25rem; }
+.pm-wordmark {
+  font-family: 'Antonio', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: -0.05rem;
+  color: #FFFFFF;
+}
+.pm-app-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  color: var(--pm-text-dim);
+  margin-left: 0.5rem;
+}
+
+/* sidebar */
+.bslib-sidebar-layout > .sidebar {
+  background-color: var(--pm-bg-alt);
+  border-right: 1px solid var(--pm-border);
+}
+.sidebar .control-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: var(--pm-teal);
+}
+.form-control, .selectize-input, .selectize-dropdown {
+  background-color: var(--pm-bg) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #FFFFFF !important;
+}
+.selectize-dropdown .active { background-color: rgba(97, 255, 208, 0.12) !important; }
+.input-group .btn-file, .btn-default {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--pm-text);
+}
+.progress-bar { background-color: var(--pm-teal); color: var(--pm-bg); }
+
+/* pill button, like the site's "Dashboard" button */
+.btn-pm {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 2.75rem;
+  padding: 0 1.5rem;
+  border: 2px solid var(--pm-teal) !important;
+  border-radius: 2.5rem;
+  background: transparent !important;
+  color: #FFFFFF !important;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+.btn-pm:hover { color: var(--pm-teal) !important; transform: scale(1.025); }
+
+/* cards and value boxes */
+.card, .bslib-value-box {
+  background-color: var(--pm-bg-alt) !important;
+  border: 1px solid var(--pm-border) !important;
+  border-radius: 0.875rem;
+  color: var(--pm-text) !important;
+}
+.card-header {
+  background: transparent;
+  border-bottom: 1px solid var(--pm-border);
+  letter-spacing: 0.02rem;
+}
+.bslib-value-box .value-box-title {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: var(--pm-text-dim);
+}
+.bslib-value-box .value-box-value {
+  font-family: 'Antonio', sans-serif;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+/* overlap flag, styled as the site's info-box */
+.pm-flag {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  border-left: 3px solid;
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.75;
+}
+.pm-flag svg { flex-shrink: 0; width: 1.25rem; height: 1.25rem; margin-top: 0.2rem; fill: none; stroke-width: 2; }
+.pm-flag h4 { font-size: 0.95rem; letter-spacing: 0.1rem; margin: 0 0 0.25rem; }
+.pm-flag ul { margin: 0.5rem 0 0; padding-left: 1.1rem; color: var(--pm-text-dim); }
+.pm-flag.warn { border-color: var(--pm-yellow); background-color: rgba(246, 201, 14, 0.05); }
+.pm-flag.warn svg, .pm-flag.warn h4 { stroke: var(--pm-yellow); color: var(--pm-yellow); }
+.pm-flag.danger { border-color: var(--pm-coral); background-color: rgba(255, 107, 107, 0.06); }
+.pm-flag.danger svg, .pm-flag.danger h4 { stroke: var(--pm-coral); color: var(--pm-coral); }
+
+/* leaflet on dark: OSM tiles inverted into a muted dark basemap (markers unaffected) */
+.leaflet-container { background: #1B1E21; font-family: 'Inter', sans-serif; }
+.leaflet-tile-pane { filter: invert(1) hue-rotate(180deg) brightness(0.8) contrast(0.85) saturate(0.25); }
+.leaflet-control.legend, .leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  background: var(--pm-bg-alt);
+  color: var(--pm-text);
+  border: 1px solid var(--pm-border);
+  box-shadow: none;
+}
+.leaflet-control.legend { border-radius: 0.5rem; }
+.leaflet-control.legend strong { color: #FFFFFF; text-transform: uppercase; letter-spacing: 0.1rem; }
+.leaflet-bar a { background: var(--pm-bg-alt); color: #FFFFFF; border-color: var(--pm-border); }
+.leaflet-control-attribution { background: rgba(33, 37, 41, 0.8) !important; color: var(--pm-text-dim); }
+.leaflet-control-attribution a { color: var(--pm-teal); }
+
+a { color: var(--pm-teal); }
+a:hover { color: #FFFFFF; }
+code { font-family: 'Fira Code', monospace; color: var(--pm-teal); background: rgba(97, 255, 208, 0.08); }
+
+/* empty-state hints */
+.shiny-output-error-validation {
+  color: var(--pm-text-dim);
+  font-size: 0.875rem;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+/* user-resizable map and chart: drag the bottom-right corner */
+.pm-resizable {
+  resize: vertical;
+  overflow: hidden;
+  min-height: 200px;
+  max-height: 200vh;
+}
+.pm-map { height: 60vh; }
+.pm-timeseries { height: 660px; }
+.pm-resizable::-webkit-resizer {
+  background:
+    linear-gradient(135deg, transparent 45%, var(--pm-teal) 45%, var(--pm-teal) 55%, transparent 55%),
+    linear-gradient(135deg, transparent 70%, var(--pm-teal) 70%, var(--pm-teal) 80%, transparent 80%);
+}
+/* full-screen cards fill the screen instead of keeping the dragged height */
+.card[data-full-screen="true"] .pm-resizable {
+  height: 100% !important;
+  max-height: none;
+  resize: none;
+}
