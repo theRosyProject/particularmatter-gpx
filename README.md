@@ -2,6 +2,10 @@
 
 Map the air you breathed along your route.
 
+> **Try it online:** <https://therosyproject.shinyapps.io/particularmatter-gpx/>
+> No installation needed. To test it right away, load the demo files from
+> [`example/`](example/) (see [Demo data](#demo-data)).
+
 This is a small R Shiny app that combines two files:
 
 - a **GPS track** (`.gpx`, e.g. exported from Strava), which says *where* you were, and
