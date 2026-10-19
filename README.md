@@ -52,7 +52,7 @@ install.packages(c(
 
 ### 3. Start the app
 
-**From RStudio:** open `strava.Rproj`, open `app.R`, then click **Run App**.
+**From RStudio:** open `particularmatter-gpx.Rproj`, open `app.R`, then click **Run App**.
 
 **From an R console** (with the project folder as working directory):
 
@@ -63,7 +63,7 @@ shiny::runApp()
 **From a terminal:**
 
 ```sh
-cd path/to/strava
+cd path/to/particularmatter-gpx
 Rscript -e 'shiny::runApp(launch.browser = TRUE)'
 ```
 
